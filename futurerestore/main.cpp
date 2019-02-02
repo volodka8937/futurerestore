@@ -86,7 +86,7 @@ void cmd_help(){
     printf("      --latest-sep\t\tUse latest signed sep instead of manually specifying one (may cause bad restore)\n");
     printf("      --latest-baseband\t\tUse latest signed baseband instead of manually specifying one (may cause bad restore)\n");
     printf("      --no-baseband\t\tSkip checks and don't flash baseband\n");
-    printf("                   \t\tWARNING: only use this for device without a baseband (eg. iPod touch or some Wi-Fi only iPads)\n");
+    printf("                   \t\tWARNING: only use this for device without a baseband (eg. iPod touch or some Wi-Fi only iPads)\n\n");
     printf("Homepage: https://github.com/s0uthwest/futurerestore\n");
     printf("Original project: https://github.com/tihmstar/futurerestore\n");
 }

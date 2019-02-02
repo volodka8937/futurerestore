@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56043D502205BEC100559249 /* json_plist.c in Sources */ = {isa = PBXBuildFile; fileRef = 56043D4C2205BEC100559249 /* json_plist.c */; };
+		56043D512205BEC100559249 /* jsmn.c in Sources */ = {isa = PBXBuildFile; fileRef = 56043D4F2205BEC100559249 /* jsmn.c */; };
+		56043D552205BF3B00559249 /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56043D542205BF3A00559249 /* libbz2.a */; };
 		5604B7C7219B3630004C22EE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5604B7C6219B3630004C22EE /* libz.tbd */; };
 		5604B7C9219B3632004C22EE /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5604B7C8219B3632004C22EE /* libcurl.tbd */; };
 		560D59EF21FE225200553AEC /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 560D59EE21FE225200553AEC /* libcommon.a */; };
@@ -72,6 +75,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		56043D4C2205BEC100559249 /* json_plist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json_plist.c; sourceTree = "<group>"; };
+		56043D4D2205BEC100559249 /* json_plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_plist.h; sourceTree = "<group>"; };
+		56043D4E2205BEC100559249 /* jsmn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsmn.h; sourceTree = "<group>"; };
+		56043D4F2205BEC100559249 /* jsmn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = jsmn.c; sourceTree = "<group>"; };
+		56043D542205BF3A00559249 /* libbz2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbz2.a; path = ../../../../../usr/local/Cellar/bzip2/1.0.6_1/lib/libbz2.a; sourceTree = "<group>"; };
 		5604B7C6219B3630004C22EE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5604B7C8219B3632004C22EE /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		560D59EE21FE225200553AEC /* libcommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcommon.a; path = ../../../../../usr/local/lib/libcommon.a; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 				560D59EF21FE225200553AEC /* libcommon.a in Frameworks */,
 				560D59FD21FE22A100553AEC /* libpartialzip-1.0.a in Frameworks */,
 				560D5A0721FE22E500553AEC /* libxpwn.a in Frameworks */,
+				56043D552205BF3B00559249 /* libbz2.a in Frameworks */,
 				560D59FB21FE229700553AEC /* liblzfse.a in Frameworks */,
 				5604B7C9219B3632004C22EE /* libcurl.tbd in Frameworks */,
 				560D59F121FE225E00553AEC /* libcrypto.a in Frameworks */,
@@ -261,6 +270,10 @@
 				878587611D89D1C1008689F0 /* img4.h */,
 				878587621D89D1C1008689F0 /* ipsw.c */,
 				878587631D89D1C1008689F0 /* ipsw.h */,
+				56043D4F2205BEC100559249 /* jsmn.c */,
+				56043D4E2205BEC100559249 /* jsmn.h */,
+				56043D4C2205BEC100559249 /* json_plist.c */,
+				56043D4D2205BEC100559249 /* json_plist.h */,
 				878587641D89D1C1008689F0 /* limera1n.c */,
 				878587651D89D1C1008689F0 /* limera1n.h */,
 				878587661D89D1C1008689F0 /* limera1n_payload.h */,
@@ -335,6 +348,7 @@
 				87F574CC1E151EF8008D5C4D /* libcorecrypto.tbd */,
 				87F574C71E151DA6008D5C4D /* libcommonCrypto.tbd */,
 				560D5A0621FE22E500553AEC /* libxpwn.a */,
+				56043D542205BF3A00559249 /* libbz2.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -429,6 +443,7 @@
 				56DA634121E3462600821A21 /* jssy.hpp in Sources */,
 				8799B0B51D89DAFF002F4D5F /* common.c in Sources */,
 				8799B0C41D89DB55002F4D5F /* mbn.c in Sources */,
+				56043D512205BEC100559249 /* jsmn.c in Sources */,
 				8799B0B81D89DAFF002F4D5F /* recovery.c in Sources */,
 				8799B0B31D89DAE7002F4D5F /* idevicerestore.c in Sources */,
 				8799B0C81D89E2BD002F4D5F /* img4tool.c in Sources */,
@@ -450,6 +465,7 @@
 				8799B0C91D89E2C3002F4D5F /* img4.c in Sources */,
 				8799B0CA1D89E371002F4D5F /* img4.c in Sources */,
 				8799B0B21D89D99D002F4D5F /* futurerestore.cpp in Sources */,
+				56043D502205BEC100559249 /* json_plist.c in Sources */,
 				56520BFC21B1BB14005BD3F7 /* jssy.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +615,7 @@
 					/usr/local/lib,
 					/usr/lib,
 					"$(SDKROOT)/usr/lib/system",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_CFLAGS = "-DHAVE_LIBIPATCHER";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.futurerestore;
@@ -620,6 +637,7 @@
 					/usr/local/lib,
 					/usr/lib,
 					"$(SDKROOT)/usr/lib/system",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_CFLAGS = "-DHAVE_LIBIPATCHER";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.futurerestore;

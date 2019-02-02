@@ -5,7 +5,7 @@ Only use if you are sure what you're doing.
 ---
 Latest release available [here](https://github.com/s0uthwest/futurerestore/releases) for Windows, macOS & Linux.
 
-I'll compile only macOS & Linux version, Windows version won't be compiled.
+I'll compile only macOS version, Windows version won't be compiled.
 
 ## Features
 * Supports the following downgrade methods
