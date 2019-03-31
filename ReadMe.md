@@ -40,6 +40,23 @@ __NOT recommended to use 'u' parameter, if you update jailbroken firmware!__
   
 ## Report an issue
 You can do it [here](https://github.com/s0uthwest/futurerestore/issues).
+
+### Restoring on Windows 10
+1.  Try to restore the phone, error -8 occurs
+2.  Leave the phone plugged in, it'll stay on the Recovery screen
+3.  Head over to Device manager under control panel in Windows
+4.  Locate "Apple Recovery (iBoot) USB Composite Device" (at the bottom)
+5.  Right click, choose "Uninstall device" - You may see a tick box that allows you to uninstall the driver software as well, tick that
+
+--All the three Apple mobile device entries under USB devices will disappear
+6.  Unplug the phone and re-plug it in
+7.  Go back to futurerestore and send the restore command again (just press the up arrow to get it back, then enter)
+
+--Error -8 is now fixed, but the process will fail again after the screen of your device has turned green
+8.  Go back to device manager and repeat the driver uninstall process as described above (step 4 to 6)
+9.  Go back to futurerestore once again and repeat the restore process
+10. The phone will reboot and error -10 will also be solved.
+11. The restore will now proceed and succeed.
   
 ## Compiling
 Simple use  `bash autogen.sh && make` or use Xcode project.
@@ -194,24 +211,6 @@ If you have signing tickets files for iOS 9.x which do not contain an ApNonce, y
 2. On the computer run `futurerestore -t ticket.shsh --latest-baseband ios9.ipsw`
 
 ---
-
-## 6) Windows 10 Restore
-### How to use
-1.  Try to restore the phone, error -8 occurs
-2.  Leave the phone plugged in, it will stay on the Recovery screen
-3.  Head over to Device manager under control panel in Windows
-4.  Locate "Apple Recovery (iBoot) USB Composite Device (at the bottom)
-5.  Right click, choose "Uninstall device" - You may see a tick box that allows you to uninstall the driver software as well, tick that
-       
-       --All the three Apple mobile device entries under USB devices will disappear
-6.  Unplug the phone and re-plug it in
-7.  Go back to futurerestore and send the restore command again (just press the up arrow to get it back, then enter)
-      
-      --Error -8 is now fixed, but the process will fail again after the screen of your device has turned green
-8.  Go back to device manager and repeat the driver uninstall process as described above (step 4 to 6)
-9.  Go back to futurerestore once again and repeat the restore process
-10. The phone will reboot and error -10 will also be solved.
-11. The restore will now proceed and succeed
 
 ## Credits
 Creator of [original project](https://github.com/tihmstar/futurerestore) - [tihmstar](https://github.com/tihmstar).
