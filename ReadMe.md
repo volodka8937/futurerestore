@@ -1,9 +1,9 @@
 # futurerestore
-_futurerestore is a hacked up idevicerestore wrapper, which allows manually specifying SEP and Baseband for restoring_
+_futurerestore is a hacked up idevicerestore wrapper, which allows manually specifying SEP and Baseband for restoring._
 
 __Only use if you are sure what you're doing.__
 ---
-Latest release available [here](https://github.com/s0uthwest/futurerestore/releases) for Windows, macOS & Linux.
+Latest release available [here](https://github.com/s0uthwest/futurerestore/releases) for macOS & Windows.
 
 I'll compile only macOS version, Windows & Linux version won't be compiled by me.
 
@@ -14,7 +14,7 @@ I'll compile only macOS version, Windows & Linux version won't be compiled by me
   * Re-restoring 32-bit devices to iOS 9 with [alitek123](https://github.com/alitek12) no-ApNonce method (alternative — [idevicererestore](https://github.com/s0uthwest/idevicererestore)).
 * Allows restoring any non-matching signed iOS/SEP/Baseband.
 
-__NOT recommended to use 'u' parameter, if you update jailbroken firmware!__
+__NOT recommended to use '-u' parameter, if you update jailbroken firmware!__
 # Dependencies
 * ## Runtime
   * On macOS, futurerestore requires no runtime dependencies, the following are only for compiling;
@@ -42,24 +42,21 @@ __NOT recommended to use 'u' parameter, if you update jailbroken firmware!__
 You can do it [here](https://github.com/s0uthwest/futurerestore/issues).
 
 ### Restoring on Windows 10
-1.  Try to restore the phone, error -8 occurs
-2.  Leave the phone plugged in, it'll stay on the Recovery screen
-3.  Head over to Device manager under control panel in Windows
-4.  Locate "Apple Recovery (iBoot) USB Composite Device" (at the bottom)
-5.  Right click, choose "Uninstall device" - You may see a tick box that allows you to uninstall the driver software as well, tick that
-
---All the three Apple mobile device entries under USB devices will disappear
-6.  Unplug the phone and re-plug it in
-7.  Go back to futurerestore and send the restore command again (just press the up arrow to get it back, then enter)
-
---Error -8 is now fixed, but the process will fail again after the screen of your device has turned green
+1.  Try to restore the phone, error -8 occurs;
+2.  Leave the phone plugged in, it'll stay on the Recovery screen;
+3.  Head over to Device manager under control panel in Windows;
+4.  Locate "Apple Recovery (iBoot) USB Composite Device" (at the bottom);
+5.  Right click, choose "Uninstall device" - You may see a tick box that allows you to uninstall the driver software as well, tick that (All the three Apple mobile device entries under USB devices will disappear);
+6.  Unplug the phone and re-plug it in;
+7.  Go back to futurerestore and send the restore command again (just press the up arrow to get it back, then enter).
+    Error -8 is now fixed, but the process will fail again after the screen of your device has turned green;
 8.  Go back to device manager and repeat the driver uninstall process as described above (step 4 to 6)
-9.  Go back to futurerestore once again and repeat the restore process
-10. The phone will reboot and error -10 will also be solved.
+9.  Go back to futurerestore once again and repeat the restore process;
+10. The phone will reboot and error -10 will also be solved;
 11. The restore will now proceed and succeed.
   
 ## Compiling
-Simple use  `bash autogen.sh && make` or use Xcode project.
+Simple use  `bash autogen.sh && make` or use Xcode project. For installing use `make install`.
   
 ### Some about curl for ubuntu
 Follow [this guide](https://dev.to/jake/using-libcurl3-and-libcurl4-on-ubuntu-1804-bionic-184g) to use tsschecker on Ubuntu 18.04 (Bionic) as it requires libcurl3 which cannot co-exist with libcurl4 on this OS.
@@ -217,4 +214,4 @@ Creator of [original project](https://github.com/tihmstar/futurerestore) - [tihm
 
 
 ReadMe updated on:
-        2019-02-18
+        2019-04-21
