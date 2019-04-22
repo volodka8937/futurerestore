@@ -62,8 +62,8 @@ static struct option longopts[] = {
 #define FLAG_IS_PWN_DFU         1 << 5
 
 void cmd_help(){
-    printf("Usage: futurerestore [OPTIONS] IPSW\n");
-    printf("Tool, which supported latest restore unsigned firmware methods for iOS devices.\n\n");
+    printf("Usage: futurerestore [OPTIONS] iPSW\n");
+    printf("Tool, which supported latest restore unsigned firmware methods for iOS/tvOS devices.\n\n");
     printf("Options:\n\n");
     printf("  -t, --apticket PATH\t\tSigning tickets used for restoring\n");
     printf("  -u, --update\t\t\tUpdate instead of erase install (requires appropriate APTicket)\n");
@@ -108,9 +108,9 @@ int main(int argc, const char * argv[]) {
     
 #ifdef HAVE_LIBIPATCHER
     printf("%s\n",libipatcher::version().c_str());
-    printf("Odysseus Support: yes\n");
+    printf("Odysseus support: yes\n");
 #else
-    printf("Odysseus Support: no\n");
+    printf("Odysseus support: no\n");
 #endif
 
     int optindex = 0;
