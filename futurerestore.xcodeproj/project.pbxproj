@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -389,10 +389,12 @@
 				};
 			};
 			buildConfigurationList = 8785873E1D89CFDC008689F0 /* Build configuration list for PBXProject "futurerestore" */;
-			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
+				en,
 			);
 			mainGroup = 8785873A1D89CFDC008689F0;
 			productRefGroup = 878587441D89CFDC008689F0 /* Products */;
@@ -531,7 +533,7 @@
 					/usr/local/lib,
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.futurerestore;
@@ -593,7 +595,7 @@
 					/usr/local/lib,
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = net.tihmstar.futurerestore;
 				PRODUCT_NAME = futurerestore;
