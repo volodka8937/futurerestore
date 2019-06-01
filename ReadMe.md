@@ -42,17 +42,18 @@ __NOT recommended to use '-u' parameter, if you update jailbroken firmware!__
 You can do it [here](https://github.com/s0uthwest/futurerestore/issues).
 
 ### Restoring on Windows 10
-1.  Try to restore the phone, error -8 occurs;
-2.  Leave the phone plugged in, it'll stay on the Recovery screen;
-3.  Head over to Device manager under control panel in Windows;
+1.  Try to restore the device, error -8 occurs;
+2.  Leave the device plugged in, it'll stay on the Recovery screen;
+3.  Head over to device manager under control panel in Windows;
 4.  Locate "Apple Recovery (iBoot) USB Composite Device" (at the bottom);
-5.  Right click, choose "Uninstall device" - You may see a tick box that allows you to uninstall the driver software as well, tick that (All the three Apple mobile device entries under USB devices will disappear);
-6.  Unplug the phone and re-plug it in;
+5.  Right click and choose "Uninstall device".
+    You may see a tick box that allows you to uninstall the driver software as well, tick that (all the three Apple mobile device entries under USB devices will disappear);
+6.  Unplug the device and re-plug it in;
 7.  Go back to futurerestore and send the restore command again (just press the up arrow to get it back, then enter).
     Error -8 is now fixed, but the process will fail again after the screen of your device has turned green;
-8.  Go back to device manager and repeat the driver uninstall process as described above (step 4 to 6)
+8.  Go back to device manager and repeat the driver uninstall process as described above (step 4 to 6);
 9.  Go back to futurerestore once again and repeat the restore process;
-10. The phone will reboot and error -10 will also be solved;
+10. The device will reboot and error -10 will also be solved;
 11. The restore will now proceed and succeed.
   
 ## Compiling
@@ -74,29 +75,38 @@ Whenever you read "downgrade" nowadays it means you can also upgrade and re-rest
 ### Requirements
 - __Jailbreak;__
 - Signing tickets (.shsh2) files with a generator;
-- nonceEnabler patch enabled;
+- nonceEnabler patch enabled (on iOS 11 and later it's enabled automatically);
 
 ### How to use
 1. Device must be jailbroken and nonceEnabler patch must be active;
 2. Open signing ticket and look up the generator:
   * Looks like this: `<key>generator</key><string>0xde3318d224cf14a1</string>`;
-3. Write the boot-nonce generator to device's nvram
+3. Write the boot-nonce generator to device's nvram (latest jailbreaks'll (for iOS 11+) unlocking nvram after setting boot-nonce):
   * SSH into the device and run `nvram com.apple.System.boot-nonce=0xde3318d224cf14a1` to set the boot-nonce generator *0xde3318d224cf14a1*;
   * verify with `nvram -p` command
 
 ### Recommended methods to activate nonceEnabler patch
-#### Method 1: ios-kern-utils (iOS 7.x-10.x)
+#### Method 1: ios-kern-utils (iOS 7.x-10.x):
 1. Install DEB-file of [ios-kern-utils](https://github.com/Siguza/ios-kern-utils/releases/) on device;
 2. Run on the device `nvpatch com.apple.System.boot-nonce`.
 
 #### Method 2: Using special applications
-Use utilities for setting boot-nonce generator — [PhœnixNonce](https://github.com/Siguza/PhoenixNonce) for iOS 9.x, [v0rtexnonce](https://github.com/arx8x/v0rtexnonce) for iOS 10.x, [nonceset1112](https://github.com/julioverne/NonceSet112) for iOS 11.0-11.1.2, [noncereboot1131UI](https://github.com/s0uthwest/noncereboot1131UI) for iOS 11.0-11.4b3, [NonceReboot12xx](https://github.com/ur0/NonceReboot12XX) for iOS 12.0-12.1.2.
+Use utilities for setting boot-nonce generator:
+1. [PhœnixNonce](https://github.com/Siguza/PhoenixNonce) for iOS 9.x;
+2. [v0rtexnonce](https://github.com/arx8x/v0rtexnonce) for iOS 10.x;
+3. [Nonceset1112](https://github.com/julioverne/NonceSet112) for iOS 11.0-11.1.2;
+4. [noncereboot1131UI](https://github.com/s0uthwest/noncereboot1131UI) for iOS 11.0-11.4b3;
+5. [NonceReboot12xx](https://github.com/ur0/NonceReboot12XX) for iOS 12.0-12.1.2.
 
 #### Method 3: Using jailbreak tools
-Use jailbreak tools for setting boot-nonce generator - [backr00m](https://nito.tv) for tvOS 10.2-11.1, [Electra](https://coolstar.org/electra) for iOS 11.x, [unc0ver](https://github.com/pwn20wndstuff/Undecimus/releases) for iOS 11.0-12.1.2 and [Chimera](https://chimera.sh) for iOS 12.0-12.1.2.
+Use jailbreak tools for setting boot-nonce generator:
+1. [backr00m](https://nito.tv) or greeng0blin for tvOS 10.2-11.1;
+2. [Electra and ElectraTV](https://coolstar.org/electra) for iOS and tvOS 11.x;
+3. [unc0ver](https://github.com/pwn20wndstuff/Undecimus/releases) for iOS 11.0-12.1.2;
+4. [Chimera and ChimeraTV](https://chimera.sh) for iOS 12.0-12.1.2 and tvOS 12.0-12.1.1.
 
 ### Activate tfp0 if jailbreak doesn't allow it
-#### Method 1 (if jailbroken on 9.3.x)
+#### Method 1 (if jailbroken on 9.2-9.3.x)
   * reboot;
   * reactivate jailbreak with [Luca Todesco](https://github.com/kpwn)'s [JailbreakMe](https://jbme.qwertyoruiop.com/);
   * done.
@@ -115,9 +125,9 @@ Use jailbreak tools for setting boot-nonce generator - [backr00m](https://nito.t
 ## 2) Prometheus (64-bit device) - ApNonce collision method (Recovery mode);
 
 ### Requirements
-- __iPhone 5s, iPad Air, iPad mini 2 (devices with A7 chip) on iOS 9.1 - 10.2;__
+- __iPhone 5s, iPad Air, iPad mini 2 (devices with A7 chip) on iOS 9.2 — 10.2 (10.3b1);__
 - Jailbreak doesn't required;
-- Signing tickets (.shsh, shsh2) with customly chosen ApNonce;
+- Signing tickets (.shsh, .shsh2) with customly chosen ApNonce;
 - Ticket needs to have one of the ApNonces, which the device generates a lot;
 - __collisioned ApNonces available in file 'nonces.txt' in [TSSChecker](https://github.com/s0uthwest/tsschecker) project.__
 
@@ -132,7 +142,8 @@ one to speed up the process: `futurerestore -w -t t1.shsh -t t2.shsh -t t3.shsh 
 ## 3) Prometheus (64-bit device) - ApNonce collision method (DFU mode);
 
 ### Requirements
-- __Devices for A7 chip (iPhone 5s, iPad Air, iPad mini 2) and some devices with A8 chip (iPod touch [6th gen]) on all iOS firmwares;__
+- __Devices with A7 (iPhone 5s, iPad Air, iPad mini 2), A8 (iPhone 6 [+], iPad mini [2,3,4], iPod touch [6th generation]) and A8X (iPad Air 2) chips on all iOS firmwares;__
+- __Devices have been released after ~September, 2015;__
 - Jailbreak doesn't required;
 - Signing tickets (.shsh, .shsh2) with customly chosen ApNonce;
 - Ticket needs to have one of the ApNonces, which the device generates a lot;
@@ -141,9 +152,9 @@ one to speed up the process: `futurerestore -w -t t1.shsh -t t2.shsh -t t3.shsh 
 
 ### How to use
 1. Connect your device in DFU mode;
-2. Use [irecovery](https://github.com/libimobiledevice/libirecovery) for check nonce booted with DFU;
+2. Use [irecovery](https://github.com/s0uthwest/libirecovery) for checking ApNonce, which booted in DFU;
 3. Extract iBSS/iBEC from target firmware for downgrade (unsigned);
-4. Check DFU ApNonces with [irecovery](https://github.com/libimobiledevice/irecovery) with DFU booting.
+4. Check DFU-collisioned ApNonces with [irecovery](https://github.com/s0uthwest/irecovery/releases), which booted in DFU.
     You can't automatically collision DFU ApNonces.
     
     __If ApNonce is not collisioned, "use hands" for DFU booting.__
@@ -153,7 +164,7 @@ one to speed up the process: `futurerestore -w -t t1.shsh -t t2.shsh -t t3.shsh 
    `img4tool -s ticket.shsh -c iBSS.signed -p <original_iBSS>`;
 6. Use [img4tool](https://github.com/s0uthwest/img4tool/releases) for sign iBEC:
    `img4tool -s ticket.shsh -c iBEC.signed -p <original_iBEC>`;
-7. So, after signing we can boot into Recovery with [irecovery](https://github.com/libimobiledevice/irecovery):
+7. So, after signing we can boot into Recovery with [irecovery](https://github.com/s0uthwest/libirecovery/releases):
 
    `irecovery -f iBSS.signed` - loading iBSS;
    
@@ -166,19 +177,19 @@ one to speed up the process: `futurerestore -w -t t1.shsh -t t2.shsh -t t3.shsh 
 
 ### Requirements
 - futurerestore compiled with [libipatcher](https://github.com/s0uthwest/libipatcher) ([Odysseus](https://dayt0n.com/articles/Odysseus) method support);
-- Jailbreak or bootrom exploit (limera1n);
+- Jailbreak or bootROM exploit (limera1n);
 - Firmware keys for the device/destination iOS must be public;
 - Signing tickets (.shsh, .shsh2) for the destination iOS (OTA blobs work too!);
 - _Odysseus bundle (You can use any successfully created bundle for this)._
 
 ### How to use
 1. Get device into kDFU/pwnDFU mode:
-  * Pre-iPhone 4s (limera1n devices):
+  * limera1n devices:
     * Enter pwnDFU mode with redsn0w or any other tool;
-  * iPhone 4s and later:
+  * Other 32-bit devices:
     * Jailbreak required;
     * Enter kDFU mode by loading a pwnediBSS from any existing Odysseus bundle.
-2. Connect your device to computer in kDFU mode (or pwnDFU mode)
+2. Connect your device to computer in kDFU / pwnDFU mode;
 3. On the computer run `futurerestore --use-pwndfu -t ticket.shsh --latest-baseband ios.ipsw`
 
 ---
