@@ -13,9 +13,10 @@
 #include <stdio.h>
 #include <functional>
 #include <vector>
-#include "idevicerestore.h"
-#include <jssy.h>
+
 #include <plist/plist.h>
+#include <jssy.h>
+#include "idevicerestore.h"
 
 #if defined _WIN32 || defined __CYGWIN__
 #ifndef WIN32

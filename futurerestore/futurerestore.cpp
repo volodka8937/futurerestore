@@ -12,12 +12,12 @@
 #include <unistd.h>
 #include <libgen.h>
 #include <zlib.h>
-#include "futurerestore.hpp"
 
 #ifdef HAVE_LIBIPATCHER
 #include <libipatcher/libipatcher.hpp>
 #endif
 
+#include "futurerestore.hpp"
 extern "C"{
 #include "common.h"
 #include "../external/img4tool/img4tool/img4.h"
