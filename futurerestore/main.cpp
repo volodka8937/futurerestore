@@ -15,6 +15,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <vector>
+
 #include "futurerestore.hpp"
 #include "tsschecker.h"
 
@@ -63,30 +64,34 @@ static struct option longopts[] = {
 
 void cmd_help(){
     printf("Usage: futurerestore [OPTIONS] iPSW\n");
-    printf("Tool, which supported latest restore unsigned firmware methods for iOS/tvOS devices.\n\n");
-    printf("Options:\n\n");
+    printf("Tool, which supported latest restore unsigned firmware methods for iOS/tvOS devices.\n");
+    
+    printf("\nGeneral options:\n");
     printf("  -t, --apticket PATH\t\tSigning tickets used for restoring\n");
     printf("  -u, --update\t\t\tUpdate instead of erase install (requires appropriate APTicket)\n");
     printf("              \t\t\tNOT recommended to use this parameter, if you update from jailbroken firmware!\n");
     printf("  -w, --wait\t\t\tKeep rebooting until ApNonce matches APTicket (ApNonce collision, unreliable)\n");
     printf("  -d, --debug\t\t\tVerbose debug output (useful for error logs)\n");
     printf("      --exit-recovery\t\tExit recovery mode and quit\n");
-
+    
+    printf("\nOptions for SEP:\n");
+    printf("      --latest-sep\t\tUse latest signed sep instead of manually specifying one (may cause bad restore)\n");
+    printf("  -s, --sep PATH\t\tSEP to be flashed\n");
+    printf("  -m, --sep-manifest PATH\tBuildManifest for requesting SEP ticket\n");
+    
 #ifdef HAVE_LIBIPATCHER
-    printf("\nLibipatcher functions:\n");
+    printf("\nOptions for Odysseus method:\n");
     printf("      --use-pwndfu\t\tuse this for restoring devices with Odysseus method. Device needs to be in kDFU mode already\n");
     printf("      --just-boot=\"-v\"\t\tuse this to tethered boot the device from kDFU mode. You can optionally set boot-args\n");
 #endif
-
-    printf("\nManually specify options for baseband/SEP:\n\n");
+    
+    printf("\nOptions for baseband:\n");
+    printf("      --latest-baseband\t\tUse latest signed baseband instead of manually specifying one (may cause bad restore)\n");
     printf("  -b, --baseband PATH\t\tBaseband to be flashed\n");
     printf("  -p, --baseband-manifest PATH\tBuildManifest for requesting baseband ticket\n");
-    printf("  -s, --sep PATH\t\tSEP to be flashed\n");
-    printf("  -m, --sep-manifest PATH\tBuildManifest for requesting SEP ticket\n\n");
-    printf("      --latest-sep\t\tUse latest signed sep instead of manually specifying one (may cause bad restore)\n");
-    printf("      --latest-baseband\t\tUse latest signed baseband instead of manually specifying one (may cause bad restore)\n");
     printf("      --no-baseband\t\tSkip checks and don't flash baseband\n");
     printf("                   \t\tWARNING: only use this for device without a baseband (eg. iPod touch or some Wi-Fi only iPads)\n\n");
+    
     printf("Homepage: https://github.com/s0uthwest/futurerestore\n");
     printf("Original project: https://github.com/tihmstar/futurerestore\n");
 }
