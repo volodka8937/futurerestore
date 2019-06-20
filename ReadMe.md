@@ -23,10 +23,10 @@ __NOT recommended to use '-u' parameter, if you update jailbroken firmware!__
 * ## External Libs
   Required:
   * [libzip](https://github.com/nih-at/libzip);
-  * [libfragmentzip](https://github.com/encounter/libfragmentzip);
+  * [libfragmentzip](https://github.com/s0uthwest/libfragmentzip);
   * [libplist](https://github.com/libimobiledevice/libplist);
   * [libirecovery](https://github.com/s0uthwest/libirecovery);
-  * [libimobiledevice](https://github.com/libimobiledevice/libimobiledevice);
+  * [libimobiledevice](https://github.com/s0uthwest/libimobiledevice);
   
   Optional:
   * [libipatcher](https://github.com/s0uthwest/libipatcher);
@@ -59,9 +59,9 @@ You can do it [here](https://github.com/s0uthwest/futurerestore/issues).
 ## Compiling
 Simple use  `bash autogen.sh && make` or use Xcode project. For installing use `make install`.
   
-### Some about [cURL](https://github.com/curl/curl) for ubuntu
-Follow [this guide](https://dev.to/jake/using-libcurl3-and-libcurl4-on-ubuntu-1804-bionic-184g) to use tsschecker on Ubuntu 18.04 (Bionic) as it requires libcurl3 which cannot co-exist with libcurl4 on this OS.
-
+### Some about [cURL](https://github.com/curl/curl)
+  * Linux: Follow [this guide](https://dev.to/jake/using-libcurl3-and-libcurl4-on-ubuntu-1804-bionic-184g) to use tsschecker on Ubuntu 18.04 (Bionic) as it requires libcurl3 which cannot coexist with libcurl4 on this OS.
+  * macOS: open file [Makefile.am](https://github.com/s0uthwest/futurerestore/blob/master/futurerestore/Makefile.am) and update line with LDADD: `futurerestore_LDADD = $(AM_LDFLAGS) libjssy.a /usr/lib/libcurl.4.dylib`
 ---
 
 ## 0) What futurerestore can do
@@ -148,7 +148,7 @@ one to speed up the process: `futurerestore -w -t t1.shsh -t t2.shsh -t t3.shsh 
 - Signing tickets (.shsh, .shsh2) with customly chosen ApNonce;
 - Ticket needs to have one of the ApNonces, which the device generates a lot;
 - __[img4tool](https://github.com/s0uthwest/img4tool) can't be used for Windows [problem with signing iBSS/iBEC], now it's TO-DO;__
-- __collisioned ApNonces available in file 'nonces.txt' in [TSSChecker](https://github.com/s0uthwest/TSSChecker) project.__
+- __collisioned ApNonces available in file 'nonces.txt' in [TSSChecker](https://github.com/s0uthwest/tsschecker) project.__
 
 ### How to use
 1. Connect your device in DFU mode;
@@ -213,4 +213,4 @@ Creator of [original project](https://github.com/tihmstar/futurerestore) - [tihm
 
 
 ReadMe updated on:
-        2019-06-01
+        2019-06-20

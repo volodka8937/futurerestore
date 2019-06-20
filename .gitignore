@@ -8,8 +8,7 @@
 *.lo
 */.libs/*
 */.deps/*
-Makefile
-Makefile.in
+Makefile*
 aclocal.m4
 autom4te.cache
 compile
@@ -22,6 +21,5 @@ ltmain.sh
 m4
 missing
 */config.h.bak
-*/futurerestore
-*/futurerestore.exe
+*/futurerestore*
 stamp-h1
