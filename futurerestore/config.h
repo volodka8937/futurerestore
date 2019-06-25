@@ -20,7 +20,7 @@
 
 #undef VERSION_SHA
 #undef VERSION_COUNT
-#define VERSION_COUNT_FUTURERESTORE "undefined version number"
-#define VERSION_SHA_FUTURERESTORE "undefined version commit"
+#define VERSION_COUNT_FUTURERESTORE "undefined number"
+#define VERSION_SHA_FUTURERESTORE "undefined commit"
 
 #endif /* config_h */

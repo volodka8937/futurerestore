@@ -9,18 +9,17 @@
 #ifndef futurerestore_hpp
 #define futurerestore_hpp
 
-#include "config.h"
 #include <stdio.h>
 #include <functional>
 #include <vector>
-
 #include <plist/plist.h>
+
 #include <jssy.h>
+#include "config.h"
 #include "idevicerestore.h"
 
 #if defined _WIN32 || defined __CYGWIN__
-#ifndef WIN32
-//make sure WIN32 is defined if compiling for windows
+#ifndef WIN32 //make sure WIN32 is defined if compiling for windows
 #define WIN32
 #endif
 #endif

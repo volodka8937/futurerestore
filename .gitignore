@@ -1,6 +1,3 @@
-*.patch
-*.diff
-*.swp
 *.DS_Store
 *.a
 *.o

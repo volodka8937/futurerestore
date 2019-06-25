@@ -28,8 +28,9 @@ AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_SUBDIRS(external/idevicerestore external/img4tool external/tsschecker)
 AC_CONFIG_SRCDIR([futurerestore])
 
+# Check for libraries
 AC_SEARCH_LIBS([pthread_create], [pthread])
-PKG_CHECK_MODULES(libplist, libplist >= 1.12)
+PKG_CHECK_MODULES(libplist, libplist >= 2.0.0)
 PKG_CHECK_MODULES(libzip, libzip >= 0.10)
 PKG_CHECK_MODULES(libimobiledevice, libimobiledevice-1.0 >= 1.2.1)
 PKG_CHECK_MODULES(libfragmentzip, libfragmentzip >= 1.0)
