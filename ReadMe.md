@@ -3,9 +3,7 @@ _futurerestore is a hacked up idevicerestore wrapper, which allows manually spec
 
 __Only use if you are sure what you're doing.__
 ---
-Latest release available [here](https://github.com/s0uthwest/futurerestore/releases) for macOS & Windows.
-
-I'll compile only macOS version, Windows & Linux version won't be compiled by me.
+Latest release available [here](https://github.com/s0uthwest/futurerestore/releases) for macOS & Windows. I'll compile only macOS/Windows versions, Linux version won't be compiled by me.
 
 ## Features
 * Supports the following downgrade methods:
@@ -100,10 +98,11 @@ Use utilities for setting boot-nonce generator:
 
 #### Method 3: Using jailbreak tools
 Use jailbreak tools for setting boot-nonce generator:
-1. [backr00m](https://nito.tv) or greeng0blin for tvOS 10.2-11.1;
-2. [Electra and ElectraTV](https://coolstar.org/electra) for iOS and tvOS 11.x;
-3. [unc0ver](https://github.com/pwn20wndstuff/Undecimus/releases) for iOS 11.0-12.1.2;
-4. [Chimera and ChimeraTV](https://chimera.sh) for iOS 12.0-12.1.2 and tvOS 12.0-12.1.1.
+1. [Meridian](https://meridian.sparkes.zone) for iOS 10.x;
+2. [backr00m](https://nito.tv) or greeng0blin for tvOS 10.2-11.1;
+3. [Electra and ElectraTV](https://coolstar.org/electra) for iOS and tvOS 11.x;
+4. [unc0ver](https://github.com/pwn20wndstuff/Undecimus/releases) for iOS 11.0-12.1.2;
+5. [Chimera and ChimeraTV](https://chimera.sh) for iOS 12.0-12.1.2 and tvOS 12.0-12.1.1.
 
 ### Activate tfp0 if jailbreak doesn't allow it
 #### Method 1 (if jailbroken on 9.2-9.3.x)
@@ -213,4 +212,5 @@ Creator of [original project](https://github.com/tihmstar/futurerestore) - [tihm
 
 
 ReadMe updated on:
-        2019-06-20
+
+        2019-07-02
