@@ -658,7 +658,7 @@ int futurerestore::doRestore(const char *ipsw){
                 printf("IM4M isn't valid for any restore with this BuildManifest\n");
                 printf("This APTicket can't be used for restoring this firmware\n");
             }
-            reterror(-44, "APTicket can't be used for this restore\n");
+            //reterror(-44, "APTicket can't be used for this restore\n");
         }else{
             if (verifyIM4MSignature(im4m)){
                 printf("IM4M signature isn't valid!\n");
