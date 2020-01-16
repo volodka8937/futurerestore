@@ -33,7 +33,7 @@ __NOT recommended to use '-u' parameter, if you update jailbroken firmware!__
   Make sure these projects compile on your system (install their dependencies)
   * [jssy](https://github.com/tihmstar/jssy);
   * [tsschecker](https://github.com/s0uthwest/tsschecker);
-  * [img4tool](https://github.com/s0uthwest/img4tool);
+  * [img4tool](https://github.com/tihmstar/img4tool);
   * [idevicerestore](https://github.com/s0uthwest/idevicerestore)
   
 ## Report an issue
